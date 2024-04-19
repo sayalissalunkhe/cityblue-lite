@@ -1,14 +1,34 @@
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            // Create a temporary div element
+            const tempDiv = document.createElement('div');
+            // Set the HTML content of the temporary div with fetched HTML
+            tempDiv.innerHTML = html;
+            // Get the header content from the temporary div
+            const headerContent = tempDiv.querySelector('header').innerHTML;
+            // Insert the header content into the #header element
+            document.getElementById('header').innerHTML = headerContent;
+        });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('footer.html')
+        .then(response => response.text()) 
+        .then(html => {
+            // Create a temporary div element
+            const tempDiv = document.createElement('div');
+            // Set the HTML content of the temporary div with fetched HTML
+            tempDiv.innerHTML = html;
+            // Get the header content from the temporary div
+            const footerContent = tempDiv.querySelector('footer').innerHTML;
+            // Insert the header content into the #header element
+            document.getElementById('footer').innerHTML = footerContent;
+        });
+});
+
 $(document).ready(function () {
-    // Load header
-    $(function () {
-        $("#header-placeholder").load("header.html");
-    });
-
-    // Load footer
-    $(function () {
-        $("#footer-placeholder").load("footer.html");
-    });
-
     $('.banner-slider-image').slick({
         draggable: true,
         arrows: false,
