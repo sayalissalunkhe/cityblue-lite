@@ -26,6 +26,30 @@ h6 {
     color: inherit;
 }
 
+.blue-text {
+    color: #2F498A;
+}
+
+.navbar-nav .dropdown-menu {
+    border-radius: 0;
+    border-top: 3px solid orange;
+}
+
+.navbar-nav .dropdown-item.active,
+.navbar-nav .dropdown-item:active {
+    color: #000;
+}
+
+.navbar-nav .dropdown-item {
+    font-size: 12px;
+    letter-spacing: 0.06rem;
+}
+
+.navbar-nav .dropdown-item:focus,
+.navbar-nav .dropdown-item:hover {
+    background-color: #EDEFF1;
+}
+
 .mobile {
     display: none !important;
 }
@@ -68,6 +92,16 @@ h6 {
 
 a:hover {
     color: #DD6522;
+}
+
+p.contact-p {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.contact-block-title {
+    color: #41494d;
+    font-size: 13px;
 }
 
 .navbar-icon-module>a {
@@ -137,7 +171,7 @@ a:hover {
     transition: all 300ms ease-in-out;
 }
 
-.banner-icon-text:hover img{
+.banner-icon-text:hover img {
     transform: scale(1.1);
 }
 
@@ -289,13 +323,14 @@ h4.section-video-module {
     height: 40px;
 }
 
-.footer-section{
+.footer-section {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     padding: 2rem 0 0;
 }
 
-.footer-section p, .newsletter-p {
+.footer-section p,
+.newsletter-p {
     font-size: 14px;
     font-weight: bold;
     color: rgb(52, 66, 132);
@@ -314,22 +349,159 @@ h4.section-video-module {
     justify-content: center;
 }
 
-.footer-social-icon-list li{
+.footer-social-icon-list li {
     margin: 0 2px;
 }
 
-.footer-bar{
+.footer-bar {
     padding: 3rem;
     border-top: 1px solid #000;
 }
 
 .footer-bar a,
-.footer-bar p{
+.footer-bar p {
     font-size: 13px;
     color: #41494d;
     text-decoration: none;
     font-weight: 400;
     margin-bottom: 0;
+}
+
+.w-30 {
+    width: 10%;
+}
+
+.w-70 {
+    width: 80%;
+}
+
+.form-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.form-input {
+    width: 200px;
+    border: none;
+    padding-bottom: 5px;
+    display: inline-block;
+    font-size: 14px;
+    border-bottom: 1px solid #9a9a9b;
+    line-height: 2;
+    margin-left: 10px;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+
+.orange-button[type="submit"] {
+    background-color: #dd6523;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+}
+
+.tab-container {}
+
+.tab-header {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.tab-header-item {
+    cursor: pointer;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-header .tab-title {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 40px;
+    transition: 0.3s;
+    font-size: 14px;
+    color: #454a4e;
+    text-decoration: none;
+}
+
+.tab-header .active .tab-title {
+    background-color: #2f498a !important;
+    color: #fff;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 600;
+}
+
+.adress-section {
+    font-size: 15px;
+}
+
+.adress-section p {
+    margin-bottom: 10px;
+}
+
+.adress-section a,
+.working-hr-section a,
+.working-hr-section p {
+    font-size: 15px;
+    color: #2f498a;
+    text-decoration: none;
+}
+
+.working-hr-section p.bold {
+    padding-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.contact-page-form-section .form-input {
+    min-width: unset;
+    border-bottom: 1px solid #ced4da;
+}
+
+.contact-page-form-section textarea.form-input {
+    border: 1px solid #ced4da;
+    resize: none;
+    padding: 10px;
+}
+
+.calling-no {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #60636d;
+}
+
+.contact-page-social .calling-no {
+    padding-left: 0;
+}
+
+.call-us {
+    text-decoration: none;
+}
+
+.dron-services-banner-section{
+    background: url('/images/Drone-Services_Banner.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0; 
+    z-index: -1;
+    background-position: right;
 }
 
 @media only screen and (max-width: 768px) {
@@ -355,6 +527,15 @@ h4.section-video-module {
 }
 
 @media only screen and (max-width: 600px) {
+    .tab-header {
+        flex-wrap: wrap;
+    }
+
+    .tab-header-item,
+    .tab-header .tab-title {
+        width: 100%;
+    }
+
     .desktop {
         display: none !important;
     }

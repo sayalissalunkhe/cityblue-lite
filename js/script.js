@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     fetch('footer.html')
-        .then(response => response.text()) 
+        .then(response => response.text())
         .then(html => {
             // Create a temporary div element
             const tempDiv = document.createElement('div');
@@ -28,12 +28,25 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+
+
 $(document).ready(function () {
+    $('.tab-header-item').click(function () {
+        var index = $(this).index();
+
+        $('.tab-header-item').removeClass('active');
+        $('.tab-pane').removeClass('active');
+
+        $(this).addClass('active');
+        $('.tab-pane').eq(index).addClass('active');
+    });
+
     $('.banner-slider-image').slick({
         draggable: true,
         arrows: false,
         autoplay: true,
         autoplaySpeed: 4000,
+        asNavFor: '.banner-slider-text',
     });
 
     $('.banner-slider-text').slick({
@@ -42,6 +55,7 @@ $(document).ready(function () {
         dots: true,
         autoplay: true,
         autoplaySpeed: 4000,
+        asNavFor: '.banner-slider-image',
     });
 
     $('.client-speak-slider').slick({
